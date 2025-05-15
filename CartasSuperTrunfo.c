@@ -1,19 +1,12 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
 char codigo[5] , codigo2[5] ;
 char estado[10], estado2[10] ; 
 int populacao, populacao2 ;
-float area , area2;
+int area , area2;
 float pib, pib2;
 int pontostur, pontostur2;
-int dp = area / populacao;
 
 printf("qual e o estado:\n");
 scanf("%s", &estado);
@@ -33,29 +26,49 @@ scanf("%d", &pontostur);
 printf("qual e o codigo\n");
 scanf("%s\n", &codigo);
 
+float dp = populacao / area;
+float pibpc = pib / populacao ;
+float superpoder = estado + populacao + area + pib + pontostur + codigo - dp + pibpc ;
 
-printf("Carta 1 \n estado:%s\n populaçao:%d\n area:%f\n pib:%f\n pontos turisticos:%d\n codigo:%s\n dp:%d\n ",estado,populacao,area,pib,pontostur,codigo,dp);
+printf("Carta 1 \n estado:%s\n populaçao:%d\n area:d\n pib:%.2f\n pontos turisticos:%d\n codigo:%s\n densidade populacional:%.2f\n pib percapita:%.2f\n super poder:%f\n ", estado,populacao,area,pib,pontostur,codigo,dp,pibpc,superpoder);
 
 
-//printf("qual e o  estado 2:\n");
-//scanf("%s", &estado2);
+// carta 2
 
-//printf("qual e a   populaçao 2:\n");
-//scanf("%d", &populacao2);
+printf("qual e o estado 2:\n");
+scanf("%s", &estado2);
 
-//printf("quala a area 2:\n");
-//scanf("%f", &area2);
+printf("qual e a   populaçao 2:\n");
+scanf("%d", &populacao2);
 
-//printf("qual o  pib 2:\n");
-//scanf("%f", &pib2);
+printf("quala a area 2:\n");
+scanf("%f", &area2);
 
-//printf("qual e o numero de pontos turisticos 2:\n");
-//scanf("%d", &pontostur);
+printf("qual o  pib 2:\n");
+scanf("%f", &pib2);
 
-//printf("qual e o codigo 2:\n");
-//scanf("%s", codigo);
+printf("qual e o numero de pontos turisticos 2:\n");
+scanf("%d", &pontostur);
 
-//printf("Carta 2 \n%s\n %d\n %f\n %f\n %d\n %d\n %s\n",estado2 , populacao2,area2,pib2,pontostur2,codigo2);
+printf("qual e o codigo 2:\n");
+scanf("%s", codigo);
 
-    return 0;
+float dp2 = populacao2 / area2;
+float pibpc2 = pib2 / populacao2 ;
+float superpoder2= estado2 + populacao2 + area2 + pib2 + pontostur2 + codigo2 - dp2 + pibpc2 ;
+
+printf("Carta 2 \n estado:%s\n populaçao:%d\n area:%.2f\n pib:%,2f\n pontos turisticos:%d\n codigo:%s\n densidade populacional:%f\n pib percapita:%f\n super poder:%f\n ",estado2 , populacao2,area2,pib2,pontostur2,codigo2,dp2,pibpc2,superpoder2);
+ 
+
+
+
+
+
+
+
+
+
+
+ return 0;
+
 }
